@@ -5,31 +5,37 @@
       <i @click="back" class="cubeic-back"></i>
     </header>
     <div class="wrapper">
-      <LocationLsit />
+      <LocationLsit :data="locations"/>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import LocationLsit from "@/components/location/LocationLsit.vue"
-  export default {
-    data(){
-        return {
-            title:"收货地址"
-        }
-    },
-    props: {
-
-    },
-    components: {
-      LocationLsit
-    },
-    methods: {
-      back() {
-        this.$router.back()
+import LocationLsit from "@/components/location/LocationList.vue"
+import locationsData from '@/datas/data-locations.json'
+let _locations = []
+locationsData.locations.forEach(item => {
+  _locations = _locations.concat(item)
+})
+export default {
+  data(){
+      return {
+          title:"收货地址",
+          locations:_locations
       }
+  },
+  props: {
+
+  },
+  components: {
+    LocationLsit
+  },
+  methods: {
+    back() {
+      this.$router.back()
     }
   }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
