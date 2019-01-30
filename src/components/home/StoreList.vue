@@ -28,7 +28,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import storesData from '../../../data-stores.json'
+import storesData from '@/datas/data-stores.json'
 import Vue from 'vue'
 let _stores = []
 storesData.stores.forEach(item => {
@@ -107,7 +107,7 @@ export default {
 .stores-wrapper 
   .store-item 
     display flex
-    padding 18px
+    padding 15px
     border-bottom 1px solid rgba(7, 17, 27, 0.1)
     &:last-child 
       border-none()

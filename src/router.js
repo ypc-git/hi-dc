@@ -26,7 +26,12 @@ export default new Router({
     {
       path: '/orderform',
       name: 'orderform',
-      component: () => import(/* webpackChunkName: "home" */ './views/Orderform.vue')
+      component: () => import(/* webpackChunkName: "orderform" */ './views/Orderform.vue')
+    },
+    {
+      path: '/location',
+      name: 'location',
+      component: () => import(/* webpackChunkName: "location" */ './views/Location.vue')
     }
   ]
 })

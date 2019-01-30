@@ -2,8 +2,13 @@
   <div class="home">
     <div slot="content" class="scroll-wrapper">
       <div class="scroll-list-wrap">
+         <Head/>
         <cube-scroll ref="scroll" :data="items">
           <cube-slide :data="items"  class="cubeList"/>
+          <div class="titel">
+            <h1>{{titel}}</h1>
+            <p>{{titel_p}}</p>
+          </div>
           <StoreList class="storeList"/>
         </cube-scroll>
       </div>
@@ -13,13 +18,14 @@
 
 <script type="text/ecmascript-6">
 import StoreList from "@/components/home/StoreList.vue"
+import Head from "@/components/home/Head.vue"
 export default {
   data() {
     return {
       items: [
         {
           url: 'http://www.didichuxing.com/',
-          image: 'http://p0.meituan.net/deal/__19893680__3455268.jpg'
+          image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
         },
         {
           url: 'http://www.didichuxing.com/',
@@ -27,16 +33,19 @@ export default {
         },
         {
           url: 'http://www.didichuxing.com/',
-          image: 'http://imgsrc.baidu.com/forum/w=580/sign=9f81b466b63eb13544c7b7b3961fa8cb/bdd0d3355982b2b7cf29a14a3badcbef77099b1b.jpg'
+          image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
         }
-      ]
+      ],
+      titel:"今日推荐",
+      titel_p:"大家都在点，邀您体验"
     }
   },
    components: {
-    StoreList
+    StoreList,
+    Head
   },
   computed: {
-
+    
   },
   methods: {
 
@@ -48,5 +57,16 @@ export default {
 .home
   height 100%
 .cubeList
-  height 160px
+  height 120px
+  margin 0 15px
+.titel
+  height 30px
+  margin 15px 15px 0 15px
+  text-align left 
+  line-height 20px
+  h1
+    font-size 18px
+  p 
+    color #bbbbbb
+    font-size 12px
 </style>

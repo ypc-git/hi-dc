@@ -1,5 +1,5 @@
 <template>
-    <div class="skip" @click="toUrl">
+    <div class="skip" @click="toHome">
        跳过<span>{{countdown}}</span>
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
         }
     },
     methods:{
-        toUrl(){
+        toHome(){
             router.push({ path: 'home', query: { plan: 'private' }})
         }
     }
