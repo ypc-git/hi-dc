@@ -4,7 +4,7 @@
             <h1>{{locationText}}</h1>
             <p><span>公司</span>{{tel}}{{name}}</p>
         </div>
-        <span class="icon"></span>
+        <span class="icon iconfont icon-bianji"></span>
     </div>
 </template>
 <script>

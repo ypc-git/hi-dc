@@ -11,6 +11,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+import LocationLsit from "@/components/location/LocationLsit.vue"
   export default {
     data(){
         return {
