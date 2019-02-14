@@ -1,7 +1,7 @@
 <template>
     <div class="">
       <ul class="stores-wrapper">
-            <li v-for="store in items" class="store-item border-1px" :key="store.storeId">
+            <li v-for="store in items" class="store-item border-1px" :key="store.index">
               <div class="icon">
                 <img width="57" height="57" :src="store.icon">
               </div>
@@ -13,7 +13,7 @@
                     <span class="count">月售{{store.sellCount}}份</span><span>好评{{store.serviceScore}}</span>
                   </div>
                   <div class="price">
-                    <span class="now" v-for="offer in store.offers" :key="offer.totalPrice">
+                    <span class="now" v-for="offer in store.offers" :key="offer.index">
                       {{offer.totalPrice}}减{{offer.reducePrice}}
                     </span>
                   </div>

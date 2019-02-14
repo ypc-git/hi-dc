@@ -1,6 +1,6 @@
 <template>
-    <div :class="{head: isActive}" @click="toLocation()">
-        <div class="head-left">
+    <div :class="{head: isActive}">
+        <div class="head-left" @click="toLocation()">
             <span class="icon iconfont icon-dingwei2"></span>
             {{location.locationText}}
             <span class="icon iconfont icon-paixujiantouxia"></span>

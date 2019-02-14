@@ -5,43 +5,44 @@
       <i @click="back" class="cubeic-back"></i>
     </header>
     <div class="wrapper">
-      <LocationLsit :data="locations"/>
+      <div class="add-location">
+        <span class="icon iconfont icon-icon-xinzeng"></span>
+        添加新地址
+      </div>
+      <LocationLsit :locationData="locationData"/>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import LocationLsit from "@/components/location/LocationList.vue"
-import locationsData from '@/datas/data-locations.json'
-let _locations = []
-locationsData.locations.forEach(item => {
-  _locations = _locations.concat(item)
-})
-export default {
-  data(){
-      return {
-          title:"收货地址",
-          locations:_locations
-      }
-  },
-  props: {
+import locationData from '@/datas/data-locations.json'
+  export default {
+    data(){
+        return {
+            title:"收货地址",
+            locationData:locationData.locations
+        }
+    },
+    props: {
 
-  },
-  components: {
-    LocationLsit
-  },
-  methods: {
-    back() {
-      this.$router.back()
+    },
+    components: {
+      LocationLsit
+    },
+    methods: {
+      back() {
+        this.$router.back()
+      }
     }
   }
-}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
 .location-page
     width: 100%
     height: 100%
+    background-color #f1f4f5
     .header
       position: relative
       height: 44px
@@ -63,4 +64,10 @@ export default {
       height: calc(100% - 44px)
       overflow-x: hidden
       overflow-y: auto
+      .add-location
+          height 45px
+          line-height 45px
+          color red
+          margin-bottom 5px
+          background-color #fff
 </style>
