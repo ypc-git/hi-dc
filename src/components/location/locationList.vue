@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="location-lsit" v-for="item in locationData" :key="item.index">
-            <div class="location-top" @click="toEidt(item.tel)">
+        <div class="location-lsit" v-for="(item,index) in locationData" :key="index">
+            <div class="location-top" @click="toEidt(item.id)">
                 <div class="location-p">
                     <h1>{{item.name}}   {{item.tel}}</h1>
                     <p>{{item.locationText}}</p>
@@ -9,7 +9,7 @@
                 <span class="icon iconfont icon-bianji2"></span>
             </div>
             <div class="location-bott">
-                <Radio :msg="msg1" class="radio"/>
+                <Radio class="radio" :msg="msg1" :name="name" :isActive="selectedNum == index ? true:false"  @click.native="changeActive(index,item.id)"/>
                 <span class="icon iconfont icon-iconfontshanchu2" @click="toDel(item.index)"></span>
             </div>
         </div>
@@ -21,7 +21,9 @@ import Radio from "@/components/common/Radio.vue"
 export default {
     data(){
         return{
-           msg1:"默认" 
+           msg1:"默认",
+           name:"1",
+           selectedNum:""
         }
     },
     props: {
@@ -33,11 +35,15 @@ export default {
       Radio
     },
     methods: {
-        toEidt(itemTel){
-            router.push({ path: 'locationEidt', query: { plan: itemTel }})
+        toEidt(id){
+            router.push({ path: 'editLocation', query: { ID: id }})
         },
         toDel(index){
             this.locationData.splice(index,1);
+        },
+        changeActive(index,id){
+            this.selectedNum = index;
+            console.log(id);
         }
     }
 }

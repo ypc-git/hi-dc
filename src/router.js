@@ -32,6 +32,11 @@ export default new Router({
       path: '/location',
       name: 'location',
       component: () => import(/* webpackChunkName: "location" */ './views/Location.vue')
+    },
+    {
+      path: '/editLocation',
+      name: 'editLocation',
+      component: () => import(/* webpackChunkName: "editLocation" */ './views/EditLocation.vue')
     }
   ]
 })

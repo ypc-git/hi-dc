@@ -5,7 +5,7 @@
       <i @click="back" class="cubeic-back"></i>
     </header>
     <div class="wrapper">
-      <div class="add-location">
+      <div class="add-location" @click="toAdd">
         <span class="icon iconfont icon-icon-xinzeng"></span>
         添加新地址
       </div>
@@ -17,6 +17,7 @@
 <script type="text/ecmascript-6">
 import LocationLsit from "@/components/location/LocationList.vue"
 import locationData from '@/datas/data-locations.json'
+import router from "@/router.js"
   export default {
     data(){
         return {
@@ -30,8 +31,11 @@ import locationData from '@/datas/data-locations.json'
     components: {
       LocationLsit
     },
-    methods: {
-      back() {
+    methods: {        
+      toAdd(){
+        router.push({ path: 'editLocation', query: { type: "add" }})
+      },
+      back(){
         this.$router.back()
       }
     }
