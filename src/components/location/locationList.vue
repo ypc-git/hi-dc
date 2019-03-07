@@ -1,16 +1,16 @@
 <template>
     <div>
         <div class="location-lsit" v-for="(item,index) in locationData" :key="index">
-            <div class="location-top" @click="toEidt(item.id)">
+            <div class="location-top">
                 <div class="location-p">
                     <h1>{{item.name}}   {{item.tel}}</h1>
                     <p>{{item.locationText}}</p>
                 </div>
-                <span class="icon iconfont icon-bianji2"></span>
+                <span class="icon iconfont icon-bianji2" @click="toEidt(item.id)"></span>
             </div>
             <div class="location-bott">
                 <Radio class="radio" :msg="msg1" :name="name" :isActive="selectedNum == index ? true:false"  @click.native="changeActive(index,item.id)"/>
-                <span class="icon iconfont icon-iconfontshanchu2" @click="toDel(item.index)"></span>
+                <span class="icon iconfont icon-iconfontshanchu2" @click="toDel(index,item.id)"></span>
             </div>
         </div>
     </div>
@@ -38,8 +38,9 @@ export default {
         toEidt(id){
             router.push({ path: 'editLocation', query: { ID: id }})
         },
-        toDel(index){
+        toDel(index,id){
             this.locationData.splice(index,1);
+            console.log("index:"+index+"id:"+id);
         },
         changeActive(index,id){
             this.selectedNum = index;
@@ -53,10 +54,12 @@ export default {
     background-color #fff
     margin-bottom 5px
     .location-top
-        border-bottom 1px solid #e4e4e4
-        padding 10px
+        border-bottom 0.2px solid #e4e4e4
+        padding 10px 15px 10px 20px
         line-height 20px
-        min-height 45px
+        display: -webkit-flex
+        display: flex
+        justify-content: space-between
         .location-p
             float left
             text-align left
@@ -68,12 +71,13 @@ export default {
             float right
             padding 10px
     .location-bott
-        padding 10px 20px 10px 10px
+        padding 10px 25px 10px 20px
         height 15px
+        display: -webkit-flex
+        display: flex
+        justify-content: space-between
         .radio
-            float left
             font-size 14px
-        span
-            float right
+            display: flex;
 </style>
 
