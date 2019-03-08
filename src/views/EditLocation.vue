@@ -107,7 +107,7 @@ export default {
       line-height 20px
       background-color #e0e0e0
       color #50585d
-      font-size 14px
+      font-size 1px
       span
         margin-right 5px
     .input-group
@@ -116,7 +116,7 @@ export default {
       line-height 45px
       border-bottom 1px solid #ddd
       display flex
-      font-size 14px
+      font-size 16px
       label
         width 25%
         display block
@@ -132,7 +132,7 @@ export default {
       height 100px
       display flex
       border-bottom 1px solid #ddd
-      font-size 14px
+      font-size 16px
       label
         width 25%
         padding-top 10px
@@ -145,6 +145,7 @@ export default {
         font-family Arial
         color #3a4246
         line-height 22px
+        font-size 16px
     .button
       width 90%
       margin 30px 5%
