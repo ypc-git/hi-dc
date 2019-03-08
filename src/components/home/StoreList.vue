@@ -1,34 +1,35 @@
 <template>
-    <div class="">
+    <div class="storeList">
       <ul class="stores-wrapper">
-            <li v-for="store in items" class="store-item border-1px" :key="store.index">
-              <div class="icon">
-                <img width="57" height="57" :src="store.icon">
+        <li v-for="store in items" class="store-item border-1px" :key="store.index" @click="toStore()">
+          <div class="icon">
+            <img width="57" height="57" :src="store.icon">
+          </div>
+          <div class="store-content">
+            <div class="store-content-right">
+              <h2 class="name">{{store.name}}</h2>
+              <p class="description">{{store.description}}</p>
+              <div class="extra">
+                <span class="count">月售{{store.sellCount}}份</span><span>好评{{store.serviceScore}}</span>
               </div>
-              <div class="store-content">
-                <div class="store-content-right">
-                  <h2 class="name">{{store.name}}</h2>
-                  <p class="description">{{store.description}}</p>
-                  <div class="extra">
-                    <span class="count">月售{{store.sellCount}}份</span><span>好评{{store.serviceScore}}</span>
-                  </div>
-                  <div class="price">
-                    <span class="now" v-for="offer in store.offers" :key="offer.index">
-                      {{offer.totalPrice}}减{{offer.reducePrice}}
-                    </span>
-                  </div>
-                </div>
-                <div class="deliveryTime">
-                  <p>{{store.deliveryTime}}分钟<span>{{store.distance}}km</span></p>
-                </div>
+              <div class="price">
+                <span class="now" v-for="offer in store.offers" :key="offer.index">
+                  {{offer.totalPrice}}减{{offer.reducePrice}}
+                </span>
               </div>
-            </li>
-          </ul>
+            </div>
+            <div class="deliveryTime">
+              <p>{{store.deliveryTime}}分钟<span>{{store.distance}}km</span></p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
 import storesData from '@/datas/data-stores.json'
+import router from "@/router.js"
 import Vue from 'vue'
 let _stores = []
 storesData.stores.forEach(item => {
@@ -41,44 +42,14 @@ export default {
     }
   },
   components: {
-     
+    
   },
   computed: {
 
   },
   methods: {
-    updatePullDownRefresh(val) {
-      this.pullDownRefresh = val
-    },
-    updatePullDownRefreshThreshold(val) {
-      this.pullDownRefreshThreshold = val
-    },
-    // updatePullDownRefreshStop(val) {
-    //   this.pullDownRefreshStop = val
-    // },
-    updatePullDownRefreshTxt(val) {
-      this.pullDownRefreshTxt = val
-    },
-    updatePullUpLoad(val) {
-      this.pullUpLoad = val
-    },
-    updatePullUpLoadThreshold(val) {
-      this.pullUpLoadThreshold = val
-    },
-    updatePullUpLoadMoreTxt(val) {
-      this.pullUpLoadMoreTxt = val
-    },
-    updatePullUpLoadNoMoreTxt(val) {
-      this.pullUpLoadNoMoreTxt = val
-    },
-    updateCustomPullDown(val) {
-      this.customPullDown = val
-    },
-    rebuildScroll() {
-      Vue.nextTick(() => {
-        this.$refs.scroll.destroy()
-        this.$refs.scroll.initScroll()
-      })
+    toStore(){
+      router.push({ path: 'store', query: { storeId: 'store' }})
     }
   }
 }
@@ -115,6 +86,8 @@ export default {
     .icon 
       flex 0 0 57px
       margin-right 10px
+      img
+        background-color #e3f4fd
     .store-content 
       flex 1
       padding-left 10px

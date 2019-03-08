@@ -34,10 +34,11 @@ export default {
 <style lang="stylus" scoped>
 .head
   height 2rem
-  margin 10px 20px
+  padding 10px 20px
   display flex
   align-items center
   justify-content space-between
+  box-shadow:0 2px 5px #b8c6d4;
 .head-right
   span
     padding-left 1rem

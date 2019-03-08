@@ -2,8 +2,8 @@
   <div class="home">
     <div slot="content" class="scroll-wrapper">
       <div class="scroll-list-wrap">
-         <Head/>
-        <cube-scroll ref="scroll" :data="items">
+        <Head/>
+        <cube-scroll ref="scroll">
           <cube-slide :data="items"  class="cubeList"/>
           <div class="titel">
             <h1>{{titel}}</h1>
@@ -24,15 +24,15 @@ export default {
     return {
       items: [
         {
-          url: 'http://www.didichuxing.com/',
+          url: '',
           image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
         },
         {
-          url: 'http://www.didichuxing.com/',
+          url: '',
           image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
         },
         {
-          url: 'http://www.didichuxing.com/',
+          url: '',
           image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
         }
       ],
@@ -58,7 +58,10 @@ export default {
   height 100%
 .cubeList
   height 120px
-  margin 0 15px
+  margin 10px 15px
+  img
+    background-color #e3f4fd
+    width 100%
 .titel
   height 30px
   margin 15px 15px 0 15px

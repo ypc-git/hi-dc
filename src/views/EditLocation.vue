@@ -1,9 +1,6 @@
 <template>
     <div class="EditLocation-page">
-      <header class="header">
-        <h1>{{title}}</h1>
-        <i @click="back" class="cubeic-back"></i>
-      </header>
+      <BackHead :title="title"/>
       <h1 class="tip"><span class="icon iconfont icon-ERP_zhuyi"></span>{{msg2}}</h1>
       <form>
         <div class="input-group">
@@ -28,7 +25,9 @@
 </template>
 
 <script type="text/ecmascript-6">
+import BackHead from "@/components/common/BackHead.vue"
 import { provinceList, cityList, areaList } from '@/datas/area'
+import locationData from '@/datas/data-locations.json'
 
 const addressData = provinceList
 addressData.forEach(province => {
@@ -41,7 +40,7 @@ export default {
   data() {
     return {
       title:"编辑地址",
-      msg2:"为了提高发货速度，请填写您的真实姓名",
+      msg2:"为了提高配送速度，请填写您的真实姓名",
       from_data:{
         name:"",
         tel:"",
@@ -52,11 +51,22 @@ export default {
   },
   mounted () {
     this.addressPicker = this.$createCascadePicker({
-      title: 'City Picker',
+      title: '',
       data: addressData,
       onSelect: this.selectHandle,
       onCancel: this.cancelHandle
-    })
+    });
+    console.log(this.$route.query.ID)
+    if(this.$route.query.ID!=undefined && this.$route.query.ID!=null && this.$route.query.ID!=""){
+          locationData.locations.forEach(location=>{
+            if(this.$route.query.ID == location.id){
+              this.from_data.name = location.name
+              this.from_data.tel = location.tel
+              this.from_data.location = location.location
+              this.from_data.d_location = location.d_location
+            }
+          })
+    }
   },
   methods: {
     back() {
@@ -64,16 +74,15 @@ export default {
     },
     submit(){
       console.log(this.from_data)
+      this.$router.back()
     },
     showAddressPicker() {
       this.addressPicker.show()
     },
     selectHandle(selectedVal, selectedIndex, selectedText) {
-      this.$createDialog({
-        type: 'warn',
-        content: `Selected Item: <br/> - value: ${selectedVal.join(', ')} <br/> - index: ${selectedIndex.join(', ')} <br/> - text: ${selectedText.join(' ')}`,
-        icon: 'cubeic-alert'
-      }).show()
+      this.from_data.location = selectedText.join(' ');
+      console.log(selectedVal.join(', '));
+      console.log(selectedIndex.join(', '))
     },
     cancelHandle() {
       this.$createToast({
@@ -84,7 +93,7 @@ export default {
     }
   },
   components: {
-
+    BackHead
   }
 }
 </script>
@@ -93,37 +102,21 @@ export default {
 .EditLocation-page
     width 100%
     height 100%
-    .header
-      position relative
-      height 44px
-      line-height 44px
-      text-align center
-      background-color #edf0f4
-      -webkit-backface-visibility hidden
-      backface-visibility hidden
-      z-index 5
-      h1
-        font-size 16px
-        font-weight 700
-      .cubeic-back
-        position absolute
-        top 0
-        left 0
-        padding 0 15px
     .tip
       width 100%
       line-height 20px
-      background-color #dcdcdc
+      background-color #e0e0e0
       color #50585d
       font-size 14px
       span
         margin-right 5px
     .input-group
       width 100%
-      height 40px
-      line-height 40px
+      height 45px
+      line-height 45px
       border-bottom 1px solid #ddd
       display flex
+      font-size 14px
       label
         width 25%
         display block
@@ -132,23 +125,26 @@ export default {
         padding 10px
         outline none
         background-color #fff
+        text-align left 
+        color #3a4246
     .textarea-group
       width 100%
-      height 70px
+      height 100px
       display flex
       border-bottom 1px solid #ddd
+      font-size 14px
       label
         width 25%
         padding-top 10px
         display block
       textarea
         width 75%
-        height 50px
         padding 10px
         outline none
         border 0
-        font-size 16px
         font-family Arial
+        color #3a4246
+        line-height 22px
     .button
       width 90%
       margin 30px 5%

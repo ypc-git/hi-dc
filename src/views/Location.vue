@@ -1,9 +1,6 @@
 <template>
   <div class="location-page">
-    <header class="header">
-      <h1>{{title}}</h1>
-      <i @click="back" class="cubeic-back"></i>
-    </header>
+    <BackHead :title="title"/>
     <div class="wrapper">
       <div class="add-location" @click="toAdd">
         <span class="icon iconfont icon-icon-xinzeng"></span>
@@ -16,6 +13,7 @@
 
 <script type="text/ecmascript-6">
 import LocationLsit from "@/components/location/LocationList.vue"
+import BackHead from "@/components/common/BackHead.vue"
 import locationData from '@/datas/data-locations.json'
 import router from "@/router.js"
   export default {
@@ -29,7 +27,8 @@ import router from "@/router.js"
 
     },
     components: {
-      LocationLsit
+      LocationLsit,
+      BackHead
     },
     methods: {        
       toAdd(){
@@ -47,24 +46,7 @@ import router from "@/router.js"
     width: 100%
     height: 100%
     background-color #f1f4f5
-    .header
-      position: relative
-      height: 44px
-      line-height: 44px
-      text-align: center
-      background-color: #edf0f4
-      -webkit-backface-visibility: hidden
-      backface-visibility: hidden
-      z-index: 5
-      h1
-        font-size: 16px
-        font-weight: 700
-      .cubeic-back
-        position: absolute
-        top: 0
-        left: 0
-        padding: 0 15px
-    >.wrapper
+    .wrapper
       height: calc(100% - 44px)
       overflow-x: hidden
       overflow-y: auto
