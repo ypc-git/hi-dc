@@ -23,20 +23,21 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .header
-  position: relative
-  height: 44px
-  line-height: 44px
-  text-align: center
-  background-color: #edf0f4
-  -webkit-backface-visibility: hidden
-  backface-visibility: hidden
+  position relative
+  height 44px
+  line-height 44px
+  text-align center
+  background-color #edf0f4
+  -webkit-backface-visibility hidden
+  backface-visibility hidden
+  box-shadow 0 2px 5px #b8c6d4
   z-index: 5
   h1
-    font-size: 16px
-    font-weight: 700
+    font-size 16px
+    font-weight 700
   .cubeic-back
-    position: absolute
+    position absolute
     top: 0
     left: 0
-    padding: 0 15px
+    padding 0 15px
 </style>

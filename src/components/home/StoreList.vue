@@ -60,21 +60,21 @@ export default {
    height 100%
   .cube-pulldown-wrapper 
     .before-trigger 
-      font-size: 30px
-      line-height: 30px
-      align-self: flex-end
+      font-size 30px
+      line-height 30px
+      align-self flex-end
       span 
-        display: inline-block
-        transition: all 0.3s
-        color: #666
+        display inline-block
+        transition all 0.3s
+        color #666
         &.rotate 
           transform: rotate(180deg)
     .after-trigger
       .refresh-text
-        color: grey
+        color grey
 .scroll-list-wrap 
   height 100%
-  overflow: hidden
+  overflow hidden
 .stores-wrapper 
   .store-item 
     display flex

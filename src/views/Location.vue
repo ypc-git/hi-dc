@@ -43,13 +43,13 @@ import router from "@/router.js"
 
 <style lang="stylus" rel="stylesheet/stylus">
 .location-page
-    width: 100%
-    height: 100%
+    width 100%
+    height 100%
     background-color #f1f4f5
     .wrapper
-      height: calc(100% - 44px)
-      overflow-x: hidden
-      overflow-y: auto
+      height calc(100% - 44px)
+      overflow-x hidden
+      overflow-y auto
       .add-location
           height 45px
           line-height 45px
