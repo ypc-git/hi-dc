@@ -1,12 +1,12 @@
 <template>
     <div :class="{head: isActive}">
         <div class="head-left" @click="toLocation()">
-            <span class="icon iconfont icon-dingwei2"></span>
+            <span class="icon iconfont icon-location"></span>
             {{location.locationText}}
             <span class="icon iconfont icon-paixujiantouxia"></span>
         </div>
         <div class="head-right">
-           <span class="icon iconfont icon-saoyisao1"></span>
+           <span class="icon iconfont icon-saoyisao5"></span>
            <span class="icon iconfont icon-tianqi-"></span>
         </div>
     </div>

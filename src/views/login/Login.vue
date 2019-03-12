@@ -2,7 +2,7 @@
   <div class="login">
     <Skip countdown="5"/>
     <div class="logo">
-        <img src="../assets/tx1.png"/>
+        <img src="../../assets/tx1.png"/>
     </div>
     <div class="from">
         <cube-input v-model="tel.telText" :placeholder="tel.placeholder" :type="tel.type" :clearable="tel.clearable"/>

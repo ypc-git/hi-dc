@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <div slot="content" class="scroll-wrapper">
+    <Head/>
+    <div class="scroll-wrapper">
       <div class="scroll-list-wrap">
-        <Head/>
         <cube-scroll ref="scroll">
           <cube-slide :data="items"  class="cubeList"/>
           <div class="titel">
@@ -13,15 +13,19 @@
         </cube-scroll>
       </div>
     </div>
+    <Tab :labelDefault="home"/>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import StoreList from "@/components/home/StoreList.vue"
 import Head from "@/components/home/Head.vue"
+import Tab from "@/components/home/Tab.vue"
+
 export default {
   data() {
     return {
+      home:"home",
       items: [
         {
           url: '',
@@ -42,7 +46,8 @@ export default {
   },
    components: {
     StoreList,
-    Head
+    Head,
+    Tab
   },
   computed: {
     
@@ -55,7 +60,9 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
 .home
-  height 100%
+  height -webkit-calc(100% - 100px)
+  height -moz-calc(100% - 100px)
+  height calc(100% - 100px)
 .cubeList
   height 120px
   margin 10px 15px
