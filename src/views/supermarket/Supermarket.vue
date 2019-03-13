@@ -1,6 +1,6 @@
 <template>
   <div class="supermarket">
-        <div class="scroll-wrapper">
+    <div class="scroll-wrapper">
       <div class="scroll-list-wrap">
         <h1>This is an ssss </h1>
       </div>
@@ -21,9 +21,11 @@ export default {
   },
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
 .supermarket
   height -webkit-calc(100% - 50px)
   height -moz-calc(100% - 50px)
   height calc(100% - 50px)
+  .scroll-wrapper
+    height: 100%;
 </style>

@@ -1,6 +1,6 @@
 <template>
   <cube-tab-bar
-    v-model="labelDefault1"
+    v-model="newLabelDefault"
     :data="tabs"
     @click="clickHandler"
     @change="changeHandler">
@@ -11,7 +11,7 @@ import router from "@/router.js"
 export default {
     data () {
         return {
-          labelDefault1:"",
+          newLabelDefault:"",
           tabs: [{
                   label: '外卖',
                   icon: 'icon iconfont icon-waimai1',
@@ -38,7 +38,7 @@ export default {
       }
     },
     mounted: function(){
-        this.labelDefault1 = this.labelDefault
+        this.newLabelDefault = this.labelDefault
     },
     methods: {
         clickHandler (value) {
