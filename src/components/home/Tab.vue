@@ -1,6 +1,6 @@
 <template>
   <cube-tab-bar
-    v-model="labelDefault"
+    v-model="labelDefault1"
     :data="tabs"
     @click="clickHandler"
     @change="changeHandler">
@@ -37,10 +37,8 @@ export default {
         default:""
       }
     },
-    computed:{
-      fist(){
+    mounted: function(){
         this.labelDefault1 = this.labelDefault
-      }
     },
     methods: {
         clickHandler (value) {

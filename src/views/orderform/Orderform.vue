@@ -1,5 +1,5 @@
 <template>
-  <div class="Orderform">
+  <div class="order-form">
         <div class="scroll-wrapper">
       <div class="scroll-list-wrap">
         <h1>This is an eeee </h1>
@@ -21,4 +21,10 @@ export default {
   },
 }
 </script>
+<style lang="stylus">
+.order-form
+  height -webkit-calc(100% - 50px)
+  height -moz-calc(100% - 50px)
+  height calc(100% - 50px)
+</style>
 

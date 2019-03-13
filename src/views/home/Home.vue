@@ -29,11 +29,11 @@ export default {
       items: [
         {
           url: '',
-          image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
+          image: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553048518&di=8c451d4509494c8afe3ef489fe02d497&imgtype=jpg&er=1&src=http%3A%2F%2Fp3.so.qhimgs1.com%2Ft01b10155e101fd7173.jpg'
         },
         {
           url: '',
-          image: 'http://img3.imgtn.bdimg.com/it/u=3149396442,2490075865&fm=26&gp=0.jpg'
+          image: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552453800706&di=7155268543ce773eb13067631e2b9afd&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fdesign%2F00%2F69%2F99%2F66%2Fs_1024_9fce5755f081660431464492a9aeb003.jpg'
         },
         {
           url: '',
@@ -60,9 +60,9 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
 .home
-  height -webkit-calc(100% - 100px)
-  height -moz-calc(100% - 100px)
-  height calc(100% - 100px)
+  height -webkit-calc(100% - 102px)
+  height -moz-calc(100% - 102px)
+  height calc(100% - 102px)
 .cubeList
   height 120px
   margin 10px 15px
