@@ -10,6 +10,8 @@
   "dependencies": {
     "css-loader": "^2.1.0",
     "cube-ui": "~1.12.1",
+    "dynamics": "^1.0.0",
+    "dynamics.js": "^1.1.5",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",

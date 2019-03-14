@@ -107,7 +107,7 @@ export default {
       line-height 20px
       background-color #e0e0e0
       color #50585d
-      font-size 1px
+      font-size 12px
       span
         margin-right 5px
     .input-group

@@ -1,9 +1,12 @@
 <template>
-  <div class="order-form">
+  <div class="orderForm">
+    <BackHead :title="title"/>
     <div class="scroll-wrapper">
-      <BackHead :title="title"/>
       <div class="scroll-list-wrap">
-        <h1>This is an eeee </h1>
+        <cube-scroll ref="scroll">
+          <h1>我的订单</h1>
+          <OrderformList />
+        </cube-scroll>
       </div>
     </div>
     <Tab :labelDefault="orderform"/>
@@ -12,6 +15,7 @@
 <script>
 import Tab from "@/components/home/Tab.vue"
 import BackHead from "@/components/common/BackHead.vue"
+import OrderformList from "@/components/orderform/OrderformList.vue"
 export default {
   data() {
     return {
@@ -21,16 +25,23 @@ export default {
   },
   components: {
     BackHead,
-    Tab
+    Tab,
+    OrderformList
   },
 }
 </script>
 <style lang="stylus" scoped>
-.order-form
-  height -webkit-calc(100% - 50px)
-  height -moz-calc(100% - 50px)
-  height calc(100% - 50px)
-  .scroll-wrapper
-    height: 100%;
+.orderForm
+  height -webkit-calc(100% - 94px)
+  height -moz-calc(100% - 94px)
+  height calc(100% - 94px)
+  .scroll-wrapper 
+    height 100%
+  .scroll-list-wrap 
+    height 100%
+    h1
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #e6e6e6;
 </style>
 
