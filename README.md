@@ -3,7 +3,7 @@
 ### 导航
 - [示例](http://140.143.193.163)
 
-![示例二维码](./src/assets/ppp.png)
+![示例二维码](https://raw.githubusercontent.com/ypc2311/hi-dc/master/src/assets/ppp.png)
 ### 工程启动
 ```shell
 npm install
