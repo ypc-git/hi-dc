@@ -61,7 +61,7 @@ export default {
         width -moz-calc(100% - 20px)
         width calc(100% - 20px)
         margin 0 10px
-        background #f7f7f7
+        background-color #f9e2bb
    .orderform-right
       width 80%
       padding 0 10px

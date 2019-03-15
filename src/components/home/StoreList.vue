@@ -87,7 +87,7 @@ export default {
       flex 0 0 57px
       margin-right 10px
       img
-        background-color #e3f4fd
+        background-color #f9e2bb
     .store-content 
       flex 1
       padding-left 10px

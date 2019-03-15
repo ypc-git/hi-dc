@@ -44,13 +44,10 @@ export default {
       titel_p:"大家都在点，邀您体验"
     }
   },
-   components: {
+  components: {
     StoreList,
     Head,
     Tab
-  },
-  computed: {
-    
   },
   methods: {
 
@@ -67,7 +64,7 @@ export default {
   height 120px
   margin 10px 15px
   img
-    background-color #e3f4fd
+    background-color #f9e2bb
     width 100%
 .titel
   height 30px

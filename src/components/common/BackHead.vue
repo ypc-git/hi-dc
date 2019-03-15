@@ -30,7 +30,7 @@ export default {
   background-color #edf0f4
   -webkit-backface-visibility hidden
   backface-visibility hidden
-  box-shadow 0 2px 5px #b8c6d4
+  box-shadow 0 1px 2px #b8c6d4
   z-index: 5
   h1
     font-size 16px
