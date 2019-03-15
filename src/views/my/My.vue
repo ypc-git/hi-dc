@@ -43,7 +43,7 @@
             </div>
             <div class="content-bars">
               <div @click="toLocation()"><span class="icon iconfont icon-dingwei6"></span>收货地址</div>
-              <div><span class="icon iconfont icon-shoucang1"></span>我的收藏</div>
+              <div><span class="icon iconfont icon-shoucang"></span>我的收藏</div>
             </div>
         </div>
       </div>
@@ -216,6 +216,6 @@ export default {
               &.icon-dingwei6
                 color #94D94A
                 font-size 18px
-              &.icon-shoucang1
+              &.icon-shoucang
                 color #FF5F3E
 </style>

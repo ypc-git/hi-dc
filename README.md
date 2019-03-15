@@ -1,6 +1,9 @@
 # hi-dc
 
-## Project setup
+### 导航
+![Example QR](./assets/imgs/ppp.png)
+
+### 工程启动
 ```shell
 npm install
 ```
