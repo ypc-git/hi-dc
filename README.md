@@ -1,8 +1,9 @@
 # hi-dc
 
 ### 导航
-![Example QR](./src/assets/ppp.png)
+- [示例](http://140.143.193.163)
 
+![示例二维码](./src/assets/ppp.png)
 ### 工程启动
 ```shell
 npm install
