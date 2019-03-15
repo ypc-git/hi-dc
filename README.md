@@ -1,7 +1,7 @@
 # hi-dc
 
 ### 导航
-![Example QR](./assets/imgs/ppp.png)
+![Example QR](./assets/ppp.png)
 
 ### 工程启动
 ```shell
