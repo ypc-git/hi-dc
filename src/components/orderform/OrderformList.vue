@@ -91,6 +91,7 @@ export default {
         color #3a3939
         text-align center
         line-height 28px
+        height 28px
         margin 10px
         border 1px solid #ddd
         border-radius 3px

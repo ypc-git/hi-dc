@@ -16,7 +16,21 @@
             "foodName":"飘香石锅鱼（大份）",
             "number":"1",
             "price":"24.5"
-        },{
+        }]
+    },{
+        "name":"飘香石锅鱼",
+        "icon":"http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114",
+        "states":"0",
+        "orderformFoods":[{
+            "foodName":"飘香石锅鱼（大份）",
+            "number":"1",
+            "price":"24.5"
+        }]
+    },{
+        "name":"飘香石锅鱼",
+        "icon":"http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114",
+        "states":"1",
+        "orderformFoods":[{
             "foodName":"米饭",
             "number":"3",
             "price":"2"
@@ -33,48 +47,6 @@
             "foodName":"飘香石锅鱼（大份）",
             "number":"1",
             "price":"24.5"
-        },{
-            "foodName":"米饭",
-            "number":"3",
-            "price":"2"
-        },{
-            "foodName":"可乐（小罐）",
-            "number":"3",
-            "price":"3.5"
-        }]
-    },{
-        "name":"飘香石锅鱼",
-        "icon":"http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114",
-        "states":"1",
-        "orderformFoods":[{
-            "foodName":"飘香石锅鱼（大份）",
-            "number":"1",
-            "price":"24.5"
-        },{
-            "foodName":"米饭",
-            "number":"3",
-            "price":"2"
-        },{
-            "foodName":"可乐（小罐）",
-            "number":"3",
-            "price":"3.5"
-        }]
-    },{
-        "name":"飘香石锅鱼",
-        "icon":"http://fuss10.elemecdn.com/c/6b/29e3d29b0db63d36f7c500bca31d8jpeg.jpeg?imageView2/1/w/114/h/114",
-        "states":"1",
-        "orderformFoods":[{
-            "foodName":"飘香石锅鱼（大份）",
-            "number":"1",
-            "price":"24.5"
-        },{
-            "foodName":"米饭",
-            "number":"3",
-            "price":"2"
-        },{
-            "foodName":"可乐（小罐）",
-            "number":"3",
-            "price":"3.5"
         }]
     },{
         "name":"飘香石锅鱼",

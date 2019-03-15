@@ -8,11 +8,11 @@
           <input v-model="from_data.name" name="name"/>
         </div>
         <div class="input-group">
-          <label>手机号码</label>
+          <label>电话</label>
           <input v-model="from_data.tel" name="tel"/>
         </div>
         <div class="input-group">
-          <label>收货地址</label>
+          <label>地址</label>
           <input v-model="from_data.location" type="button" @click="showAddressPicker"/>
         </div>
         <div class="textarea-group">

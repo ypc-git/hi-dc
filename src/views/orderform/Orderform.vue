@@ -41,7 +41,10 @@ export default {
     height 100%
     h1
       text-align: left;
-      padding: 10px;
+      padding:15px 10px;
+      font-size 18px
+      font-weight 500
+      color #333
       border-bottom: 1px solid #e6e6e6;
 </style>
 
