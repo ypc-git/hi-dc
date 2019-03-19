@@ -3,18 +3,18 @@
 ### 导航
 - [示例](http://140.143.193.163)
 
-![示例二维码](https://raw.githubusercontent.com/ypc2311/hi-dc/master/src/assets/ppp.png)
-### 工程启动
+![示例二维码](./src/assets/ppp.png)
+### install
 ```shell
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动
 ```shell
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```shell
 npm run build
 ```
