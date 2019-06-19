@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <Skip countdown="5"/>
+    <Skip :countdown="5"/>
     <div class="logo">
         <img src="../../assets/tx1.png"/>
     </div>
